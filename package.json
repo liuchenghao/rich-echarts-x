@@ -1,14 +1,20 @@
 {
   "name": "rich-echarts-x",
   "description": "Extension pack of ECharts providing 3d plots and globe visualization",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "maintainers": [
       { "name": "Yi Shen", "email": "shenyi.914@gmail.com" }
   ],
   "dependencies": {
-      "zrender": "2.0.8",
-      "rich-echarts": "0.0.1",
-      "qtek": "0.2.1"
+    "rich-echarts": "^0.0.1",
+    "qtek": "0.2.1-amd-beta2",
+    "zrenderjs": "2.0.8-amd-beta1"
+  },
+  "devDependencies": {
+    "del": "^2.0.0",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-replace": "^0.5.4"
   },
   "repository": "git://github.com/ecomfe/echarts-x",
   "main": "echarts-x",
