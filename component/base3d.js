@@ -9,7 +9,7 @@ define(function (require) {
 
     'use strict';
 
-    var ComponentBase = require('echarts/component/base');
+    var ComponentBase = require('rich-echarts/component/base');
     var Layer3D = require('../core/Layer3D');
     var zrUtil = require('zrenderjs/tool/util');
 

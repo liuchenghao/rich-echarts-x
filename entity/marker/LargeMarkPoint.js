@@ -18,7 +18,7 @@ define(function (require) {
     var Texture2D = require('qtek/Texture2D');
     var spriteUtil = require('../../util/sprite');
     var Vector3 = require('qtek/math/Vector3');
-    var IconShape = require('echarts/util/shape/Icon');
+    var IconShape = require('rich-echarts/util/shape/Icon');
 
     /**
      * @constructor

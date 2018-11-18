@@ -37,7 +37,7 @@ define(function (require) {
     var ecx = {
         version: '0.2.0',
         dependencies: {
-            echarts: '2.2.1',
+          'rich-echarts': '0.0.3',
             zrender: '2.0.8',
             qtek: '0.2.1'
         }
@@ -58,9 +58,9 @@ define(function (require) {
     }
     checkVersion(require('zrenderjs'), 'zrender');
     checkVersion(require('qtek'), 'qtek');
-    checkVersion(require('echarts'), 'echarts');
+    checkVersion(require('rich-echarts'), 'rich-echarts');
 
-    var ecConfig = require('echarts/config');
+    var ecConfig = require('rich-echarts/config');
     var ecxConfig = require('./config');
     var zrUtil = require('zrenderjs/tool/util');
 

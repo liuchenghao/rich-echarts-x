@@ -18,10 +18,10 @@ define(function (require) {
     var TextureAtlasSurface = require('../../surface/TextureAtlasSurface');
     var SpritesGeometry = require('../../util/geometry/Sprites');
 
-    var IconShape = require('echarts/util/shape/Icon');
+    var IconShape = require('rich-echarts/util/shape/Icon');
     var ImageShape = require('zrenderjs/shape/Image');
 
-    var ecData = require('echarts/util/ecData');
+    var ecData = require('rich-echarts/util/ecData');
 
     var Matrix4 = require('qtek/math/Matrix4');
     var zrConfig = require('zrenderjs/config');

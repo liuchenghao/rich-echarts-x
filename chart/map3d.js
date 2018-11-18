@@ -8,12 +8,12 @@ define(function (require) {
     var zrUtil = require('zrenderjs/tool/util');
     var zrConfig = require('zrenderjs/config');
 
-    var ecData = require('echarts/util/ecData');
+    var ecData = require('rich-echarts/util/ecData');
 
-    var mapParams = require('echarts/util/mapData/params').params;
-    var geoCoordMap = require('echarts/util/mapData/geoCoord');
-    var textFixedMap = require('echarts/util/mapData/textFixed');
-    var normalProj = require('echarts/util/projection/normal');
+    var mapParams = require('rich-echarts/util/mapData/params').params;
+    var geoCoordMap = require('rich-echarts/util/mapData/geoCoord');
+    var textFixedMap = require('rich-echarts/util/mapData/textFixed');
+    var normalProj = require('rich-echarts/util/projection/normal');
 
     var PolygonShape = require('zrenderjs/shape/Polygon');
     var ShapeBundle = require('zrenderjs/shape/ShapeBundle');
@@ -1807,7 +1807,7 @@ define(function (require) {
 
     zrUtil.inherits(Map3D, ChartBase3D);
 
-    require('echarts/chart').define(ecConfig.CHART_TYPE_MAP3D, Map3D);
+    require('rich-echarts/chart').define(ecConfig.CHART_TYPE_MAP3D, Map3D);
 
     return Map3D;
 });

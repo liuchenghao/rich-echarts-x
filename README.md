@@ -34,11 +34,11 @@ $ npm i --save echarts-x
 Then with a module bundler like [webpack](https://github.com/webpack/webpack), require `text-loader`:
 
 ```js
-import echarts from 'echarts';
-import 'echarts-x';
-import 'echarts/chart/map';
-import 'echarts/chart/bar';
-import 'echarts-x/chart/map3d';
+import echarts from 'rich-echarts';
+import 'rich-echarts-x';
+import 'rich-echarts/chart/map';
+import 'rich-echarts/chart/bar';
+import 'rich-echarts-x/chart/map3d';
 
 let mychart = echarts.init(dom);
 mychart.setOption({...});
