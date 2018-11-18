@@ -1,14 +1,14 @@
 {
   "name": "rich-echarts-x",
   "description": "Extension pack of ECharts providing 3d plots and globe visualization",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "maintainers": [
       { "name": "Yi Shen", "email": "shenyi.914@gmail.com" }
   ],
   "dependencies": {
-    "rich-echarts": "^0.0.1",
+    "rich-echarts": "^0.0.3",
     "qtek": "0.2.1-amd-beta2",
-    "zrenderjs": "2.0.8-amd-beta1"
+    "zrenderjs": "^2.1.1"
   },
   "devDependencies": {
     "del": "^2.0.0",
