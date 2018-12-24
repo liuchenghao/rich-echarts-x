@@ -177,39 +177,53 @@ define(function (require) {
          * @param {number} [y] y
          */
         hover: function (x, y) {
-            var list = this._storage.getShapeList();
-            var shape;
+          var list = this._storage.getShapeList();
+          var shape;
 
-            if (typeof (x) == 'number') {
-                shape = this.pickByCoord(x, y);
-            }
-            else {
-                var e = x;
-                shape = this.pick(e.target, e.face, e.point, list);
-            }
+          if (typeof (x) == 'number') {
+              shape = this.pickByCoord(x, y);
+          }
+          else {
+              var e = x;
+              shape = this.pick(e.target, e.face, e.point, list);
+          }
+          var shapeNP;
+          var needsRefresh = false;
+          for (var i = 0; i < list.length; i++) {
+              list[i].isHighlight = false;
+              list[i].zlevel = 0;
+              if (
+                  list[i] == shape && !list[i].isHighlight
+                  || (list[i] != shape && list[i].isHighlight)
+              ) {
+                  var mapping = {
+                    'shape-bundle': function () {
+                      shapeNP = list[i + 1];
+                    },
+                    'text': function () {
+                      shapeNP = list[i - 1];
+                    }
+                  }
+                  var type = shape.type;
+                  mapping[type] && mapping[type]();
+                  needsRefresh = true;
+                  // break;
+              }
+          }
+          if(shapeNP) {
+            shapeNP.isHighlight = true;
+            shapeNP.zlevel = 10;
+          }
+          if (shape) {
+              shape.isHighlight = true;
+              shape.zlevel = 10;
+          }
+          if (needsRefresh) {
+              this.refreshNextTick();
+          }
 
-            var needsRefresh = false;
-            for (var i = 0; i < list.length; i++) {
-                list[i].isHighlight = false;
-                list[i].zlevel = 0;
-                if (
-                    list[i] == shape && !list[i].isHighlight
-                    || (list[i] != shape && list[i].isHighlight)
-                ) {
-                    needsRefresh = true;
-                }
-            }
-            if (shape) {
-                shape.isHighlight = true;
-                shape.zlevel = 10;
-            }
-
-            if (needsRefresh) {
-                this.refreshNextTick();
-            }
-
-            return shape;
-        },
+          return shape;
+      },
 
         /**
          * Get shape by name

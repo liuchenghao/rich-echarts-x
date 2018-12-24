@@ -1147,6 +1147,7 @@ define(function (require) {
                         )
                     },
                     highlightStyle: {
+                        brushType: 'fill',
                         color: this.deepQuery(
                             queryTarget, 'itemStyle.emphasis.label.textStyle.color'
                         ),
